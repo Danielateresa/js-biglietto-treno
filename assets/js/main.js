@@ -11,7 +11,7 @@ Questo richiederà un minimo di ricerca, oltre alla ricerca da fare per ricordar
 
 //chiedere all'utente:il numero di chilometri che vuole percorrere
 const passengerKm = Number(prompt("Che distanza vui percorrere?"));
-console.log(passengerKm, "km");
+console.log(passengerKm);
 
 //chiedere l'età del passeggero
 const passengerAge = Number(prompt("Quanti anni hai?"));
@@ -31,11 +31,16 @@ const over65Cost = routeCost * 0.40;
 (con massimo due decimali, per indicare centesimi sul prezzo)*/
 if (passengerAge <= 18) {
     //se il passeggero è minorenne c'è lo sconto del 20%
-    console.log("il prezzo del tuo biglietto è", minorCost);
+    console.log("Sei minorenne, il prezzo del tuo biglietto è", minorCost);
+    document.getElementById('price').innerHTML = "Sei minorenne, il prezzo del tuo biglietto è " + minorCost;
 } else if (passengerAge >= 65) {
     //se il passeggero è over65 'è lo sconto del 40%
-    console.log("il prezzo del tuo biglietto è", over65Cost);
+    console.log("Sei un over 65, il prezzo del tuo biglietto è", over65Cost);
+    document.getElementById('price').innerHTML = "Sei un over 65, il prezzo del tuo biglietto è " + over65Cost;
 } else {
     //altrimenti nessuno sconto
-    console.log("il prezzo del tuo biglietto è", routeCost);
+    console.log("il prezzo del tuo biglietto intero è", routeCost);
+    document.getElementById('price').innerHTML = "Il prezzo del tuo biglietto intero è " + routeCost;
+
 }
+
