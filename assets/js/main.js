@@ -18,14 +18,14 @@ const passengerAge = Number(prompt("Quanti anni hai?"));
 console.log(passengerAge);
 
 //calcolare il prezzo totale del viaggio(0.21 € al km)
-const routeCost = Math.round(passengerKm * 0.21);
+const routeCost = (passengerKm * 0.21).toFixed(2);
 console.log(routeCost);
 
 //calcolare sconto del 20% per i minorenni
-const minorCost = Math.round(routeCost * 0.20);
+const minorCost = (routeCost * 0.20).toFixed(2);
 
 //calcolare sconto del 40% per gli over 65.
-const over65Cost = Math.round(((routeCost * 0.40) + Number.EPSILON) * 100) / 100;
+const over65Cost = (routeCost * 0.40).toFixed(2);
 
 /*L'output del prezzo finale va messo fuori in forma umana 
 (con massimo due decimali, per indicare centesimi sul prezzo)*/
