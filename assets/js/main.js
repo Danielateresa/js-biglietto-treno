@@ -19,17 +19,17 @@ const passengerAge = Number(prompt("Quanti anni hai?"));
 //console.log(passengerAge);
 
 //calcolare il prezzo totale del viaggio(0.21 € al km)
-const routeCost = (passengerKm * 0.21).toFixed(2);
+const routeCost = passengerKm * 0.21;
 //console.log(routeCost);
 
 //calcolare sconto del 20% per i minorenni
 const minorSale = 20;
-const minorCostCalc = (routeCost / 100) * minorSale.toFixed(2);
+const minorCostCalc = (routeCost / 100) * minorSale;
 const minorCost = routeCost - minorCostCalc;
 
 //calcolare sconto del 40% per gli over 65.
 const over65sale = 40;
-const over65CostCalc = (routeCost / 100) * over65sale.toFixed(2);
+const over65CostCalc = (routeCost / 100) * over65sale;
 const over65Cost = routeCost - over65CostCalc;
 
 /*L'output del prezzo finale va messo fuori in forma umana 
@@ -37,14 +37,14 @@ const over65Cost = routeCost - over65CostCalc;
 if (passengerAge < 18) {
     //se il passeggero è minorenne c'è lo sconto del 20%
     //console.log("Sei minorenne, il prezzo del tuo biglietto è", minorCost);
-    document.getElementById('price').innerHTML = "Sei minorenne, il prezzo del tuo biglietto è " + minorCost + " €";
+    document.getElementById('price').innerHTML = "Sei minorenne, il prezzo del tuo biglietto è " + minorCost.toFixed(2) + " €";
 } else if (passengerAge >= 65) {
     //altrimenti se il passeggero è over65 'è lo sconto del 40%
     //console.log("Sei un over 65, il prezzo del tuo biglietto è", over65Cost);
-    document.getElementById('price').innerHTML = "Sei un over 65, il prezzo del tuo biglietto è " + over65Cost + " €";
+    document.getElementById('price').innerHTML = "Sei un over 65, il prezzo del tuo biglietto è " + over65Cost.toFixed(2) + " €";
 } else {
     //altrimenti nessuno sconto
     //console.log("il prezzo del tuo biglietto intero è", routeCost);
-    document.getElementById('price').innerHTML = "Il prezzo del tuo biglietto intero è " + routeCost + " €";
+    document.getElementById('price').innerHTML = "Il prezzo del tuo biglietto intero è " + routeCost.toFixed(2) + " €";
 }
 
