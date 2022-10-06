@@ -29,7 +29,7 @@ const minorCost = routeCost - minorCostCalc;
 
 //calcolare sconto del 40% per gli over 65.
 const over65sale = 40;
-const over65CostCalc = (routeCost * 0.40) * over65sale.toFixed(2);
+const over65CostCalc = (routeCost / 100) * over65sale.toFixed(2);
 const over65Cost = routeCost - over65CostCalc;
 
 /*L'output del prezzo finale va messo fuori in forma umana 
