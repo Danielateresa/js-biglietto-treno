@@ -23,10 +23,14 @@ const routeCost = (passengerKm * 0.21).toFixed(2);
 //console.log(routeCost);
 
 //calcolare sconto del 20% per i minorenni
-const minorCost = (routeCost * 0.20).toFixed(2);
+const minorSale = 20;
+const minorCostCalc = (routeCost / 100) * minorSale.toFixed(2);
+const minorCost = routeCost - minorCostCalc;
 
 //calcolare sconto del 40% per gli over 65.
-const over65Cost = (routeCost * 0.40).toFixed(2);
+const over65sale = 40;
+const over65CostCalc = (routeCost * 0.40).toFixed(2);
+const over65Cost = routeCost - over65CostCalc;
 
 /*L'output del prezzo finale va messo fuori in forma umana 
 (con massimo due decimali, per indicare centesimi sul prezzo)*/
