@@ -29,8 +29,13 @@ const over65Cost = routeCost * 0.40
 
 /*L'output del prezzo finale va messo fuori in forma umana 
 (con massimo due decimali, per indicare centesimi sul prezzo)*/
-if () {
-
+if (passengerAge <= 18) {
+    //se il passeggero è minorenne c'è lo sconto del 20%
+    console.log("il prezzo del tuo biglietto è", minorCost);
+} else if (passengerAge >= 65) {
+    //se il passeggero è over65 'è lo sconto del 40%
+    console.log("il prezzo del tuo biglietto è", over65Cost);
 } else {
-
+    //altrimenti nessuno sconto
+    console.log("il prezzo del tuo biglietto è", routeCost);
 }
